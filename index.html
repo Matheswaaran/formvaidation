@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<div id="app">
+		<form id="formValidate" method="POST">
+			<label>First Name</label>
+			<input type="text" id="first_name" name="first_name" placeholder="First Name" required autofocus><br><br>
+			<label>Last Name</label>
+			<input type="text" id="last_name" name="last_name" placeholder="Last Name" required><br><br>
+			<label>Username</label>
+			<input type="text" id="user_name" name="user_name" placeholder="Must be unique" required>
+			<p id="useravail" style="display: none">username not available</p><br><br>
+			<label>Password</label>
+			<input type="password" id="password" name="password" placeholder="8 - 30 Characters" required>
+			<p id="passchk" style="display: none">Password not valid</p><br><br>
+			<label>Retype Password</label>
+			<input type="password" id="re_password" name="re_password" placeholder="8 - 30 Characters" required>
+			<p id="repasschk" style="display: none">Passwords doesnot matched</p><br><br>
+			<label>Email-ID</label>
+			<input type="text" id="email_id" name="email_id" placeholder="enter a valid email address" required>
+			<p id="emailchk" style="display: none">Enter a valid Email Address</p><br><br>
+			<label>Contact No</label>
+			<input type="text" id="contact_no" name="contact_no" placeholder="Phone number" required><br><br>
+			<label>Gender</label>
+			<input type="radio" id="gender_male" name="gender" value="male" required>Male
+			<input type="radio" id="gender_female" name="gender" value="female" required>Female
+			<input type="radio" id="gender_others" name="gender" value="others" required>Others<br><br>
+			<label>Address</label>
+			<textarea type="text" id="address" name="address" placeholder="Address" required></textarea><br><br>
+			<label>Nationality</label>
+			<input type="text" id="nationality" name="nationality" placeholder="your nationality" required><br><br>
+			<input type="submit" value="Submit" id="submit" name="submit">
+		</form>
+	</div>
+	<script src="src/index.js"></script>
+</body>
+</html>
