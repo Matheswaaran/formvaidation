@@ -29,8 +29,24 @@ form.re_password.addEventListener("keyup", () => {
 form.email_id.addEventListener("keyup", () => {
   if (chkEmail(form.email_id.value)) {
     document.getElementById("emailchk").style.display = "none";
-    btnSubmit.disabled = false;
   } else {
     document.getElementById("emailchk").style.display = "block";
   }
+});
+
+let count = 0;
+Array.from(document.getElementsByName("hobbies")).forEach(element => {
+  element.addEventListener("click", function() {
+    if (element.checked === true) {
+      count++;
+    } else if (element.checked === false) {
+      count--;
+    }
+    if (count > 2) {
+      alert("Only two can be selected");
+      element.checked = false;
+      count--;
+    }
+    console.log(count);
+  });
 });
